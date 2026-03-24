@@ -1,0 +1,11 @@
+{
+  "student_name": "Hanmo (Cynthia) Yang",
+  "week": "Week 1",
+  "date": "0323",
+  "project": "State Capitals location",
+  "tasks_completed": [
+    "Created JSON file",
+    "Created a Python program to produce longitude and latitude"
+  ],
+  "status": "Completed"
+}
