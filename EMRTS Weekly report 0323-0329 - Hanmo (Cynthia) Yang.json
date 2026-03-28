@@ -6,30 +6,29 @@
 
   "weekly_report": {
     "week": "03/23 – 03/29",
-    "subject": {
-      "title": "Water Jug Project",
-      "repository": "https://github.com/Cynnnthia/EMRTS-internship-projects/blob/main/state%20capitals%20project.py",
-
-      "details": [
-        "Implemented Breadth-First Search (BFS) algorithm to solve the water jug problem.",
-        "Modeled state transitions for fill, empty, and pour operations between two jugs (3L and 5L).",
-        "Tracked visited states to avoid infinite loops and ensure optimal solution.",
-        "Generated the shortest sequence of steps to reach the target volume (4L).",
-        "Formatted output to display step-by-step state transitions clearly."
-      ],
-
-    }
-    "subject": {
-      "title": " State Capitals Project",
-      "repository": "https://github.com/Cynnnthia/EMRTS-internship-projects/blob/main/Gallon%20bucket%20project.py",
-
-      "details": [
-        "Created a JSON dataset containing all U.S. state capitals and addresses.",
-        "Integrated geopy library with Nominatim API to retrieve geographic coordinates.",
-        "Extracted latitude, longitude, and zipcode for each capital.",
-        "Implemented error handling for missing or failed geolocation queries.",
-        "Saved enriched data into a new JSON file for further use."
-      ],
-
+    "subjects": [
+      {
+        "title": "Water Jug Project",
+        "repository": "https://github.com/Cynnnthia/EMRTS-internship-projects/blob/main/state%20capitals%20project.py",
+        "details": [
+          "Implemented Breadth-First Search (BFS) algorithm to solve the water jug problem.",
+          "Modeled state transitions for fill, empty, and pour operations between two jugs (3L and 5L).",
+          "Tracked visited states to avoid infinite loops and ensure optimal solution.",
+          "Generated the shortest sequence of steps to reach the target volume (4L).",
+          "Formatted output to display step-by-step state transitions clearly."
+        ]
+      },
+      {
+        "title": "State Capitals Project",
+        "repository": "https://github.com/Cynnnthia/EMRTS-internship-projects/blob/main/Gallon%20bucket%20project.py",
+        "details": [
+          "Created a JSON dataset containing all U.S. state capitals and addresses.",
+          "Integrated geopy library with Nominatim API to retrieve geographic coordinates.",
+          "Extracted latitude, longitude, and zipcode for each capital.",
+          "Implemented error handling for missing or failed geolocation queries.",
+          "Saved enriched data into a new JSON file for further use."
+        ]
+      }
+    ]
   }
 }
