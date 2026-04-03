@@ -1,0 +1,98 @@
+{
+  "name": "Hanmo (Cynthia) Yang",
+  "phone": "5303767726",
+  "email": "sunnyhanmo2017@hotmail.com",
+  "github": "https://github.com/Cynnnthia/Medicaid-Expenditure-Project",
+  "weekly_report": {
+    "week": "03/30 – 04/03",
+    "subject": {
+      "title": "Medicaid_Expenditure_Projection_Model",
+      "repository": "https://github.com/Cynnnthia/Medicaid-Expenditure-Project",
+      "details": [
+        "Ingested and structured 13 years of historical Medicaid expenditure data (2013–2025) into a pandas DataFrame with annual and monthly granularity.",
+        "Generated a monthly interpolated time series (156 data points) using linear regression on fractional year values to support ARIMA and Holt-Winters modeling.",
+        "Performed exploratory data analysis (EDA): computed year-over-year growth rates and decomposed the monthly series into trend, seasonal, and residual components using statsmodels.",
+        "Built and evaluated four forecasting models — Linear Regression, Polynomial Regression (degree 2), ARIMA(1,1,1), and Holt-Winters with damped trend — using a train/test split of 10/3 years.",
+        "Compared models using MAE, RMSE, and MAPE metrics; implemented automatic best-model selection ranked by MAPE.",
+        "Generated a 10-year projection table (2026–2035) with point estimates and 95% confidence intervals, exported to CSV.",
+        "Produced five matplotlib visualizations: historical trend, YoY growth bar chart, all-model comparison, best-model forecast with CI band, and rolling 12-month average.",
+        "Exported a multi-page PDF visualization report and a self-contained interactive HTML dashboard using Chart.js.",
+        "Built an interactive 4-model comparison dashboard rendered inline in Claude with live model switching and projection table."
+      ],
+      "notes": [
+        "Monthly data was synthetically interpolated from annual data using linear regression since no true monthly source data was available.",
+        "ARIMA was fitted on annual data (13 points) due to limited observations; results should be interpreted with caution.",
+        "Holt-Winters with damped trend was selected as the best-performing model based on lowest MAPE on the test set.",
+        "95% confidence intervals were approximated as ±1.96 × residual standard deviation for regression models.",
+        "Prophet model is conditionally included — requires separate installation via: pip install prophet.",
+        "All outputs are saved to a unified medicaid_output/ directory including CSV, PNG, PDF, and HTML files.",
+        "The HTML report is fully self-contained (single file) and can be opened directly in any browser without a server."
+      ]
+    },
+    "plan_next_week": [
+      "Integrate real monthly Medicaid expenditure data to replace interpolated series.",
+      "Add state-level analysis alongside national projections.",
+      "Implement Prophet model and include it in the model comparison pipeline.",
+      "Improve confidence interval estimation using bootstrap resampling.",
+      "Build a Streamlit dashboard for interactive exploration of projections."
+    ],
+    "hours_worked": 20
+  },
+  "intern_checklist": [
+    "Receive the internship offer letter",
+    "Accept the terms of the offer letter",
+    "Create a telegram account and be added into group chat",
+    "Create a linkedin account (Connect with Verbus, and other interns in the program. Then join MMIS Professionals and Mostly Medicaid (Medicaid Professionals))",
+    "Create a Github account",
+    "Please use Mermaid in your documentation.",
+    "https://mermaid-js.github.io/mermaid/#/",
+    "https://github.blog/2022-02-14-include-diagrams-markdown-files-mermaid/",
+    "Please use dbdiagram for ERD Documentation https://dbdiagram.io/",
+    "Obtain Gloodata information https://gloodata.com/",
+    "Watch Gloodata tutorials",
+    "Practice Gloodata",
+    "Obtain Ubuntu information",
+    "Read \"Pro Bash Programming\"",
+    "Watch bash tutorials",
+    "Practice bash",
+    "Recommended AI assistant is CLAUDE",
+    "Attend the daily standup calls",
+    "Take notes and produce weekly report (due Friday's, Saturdays at the latest)",
+    "PDF(EMRTS_Weekly_report_date_firstname_lastname.pdf)",
+    "JSON (EMRTS_Weekly_report_date_firstname_lastname.json)",
+    "Watch the Python Lectures from MIT https://ocw.mit.edu/courses/6-0001-introduction-to-computer-science-and-programming-in-python-fall-2016/",
+    "https://ocw.mit.edu/courses/6-0002-introduction-to-computational-thinking-and-data-science-fall-2016/",
+    "Python package managing \"uv\" https://www.youtube.com/watch?v=AMdG7IjgSPM",
+    "Learn about Medicaid domain",
+    "What is Medicaid",
+    "Reading the blog from EMRTS.us",
+    "Understand the sources",
+    "Learn about time series analysis",
+    "Online tutorial",
+    "What is Prophet",
+    "Packages/programming languages to use",
+    "Practice Prophet",
+    "Work on the Assigned Project",
+    "Understand the purpose of the Project",
+    "Teamwork",
+    "Discuss and share the opinion and thoughts over Project",
+    "Distribute the part of working"
+  ],
+  "resources": [
+    "statsmodels documentation: https://www.statsmodels.org/stable/index.html",
+    "Prophet documentation: https://facebook.github.io/prophet/",
+    "scikit-learn Linear Regression: https://scikit-learn.org/stable/modules/generated/sklearn.linear_model.LinearRegression.html",
+    "Medicaid.gov expenditure data: https://www.medicaid.gov/medicaid/financial-management/medicaid-financial-management-info/index.html",
+    "Time Series Forecasting with Python (book): https://machinelearningmastery.com/introduction-to-time-series-forecasting-with-python/"
+  ],
+  "current_links": {
+    "EMR TECHNICAL SOLUTIONS, LLC": "https://emrts.us/",
+    "Edmond Data Science": "https://edmonddatascience.com/",
+    "Provider Vault": "https://providervault.us/",
+    "Project Repository": "https://github.com/Cynnnthia/Medicaid-Expenditure-Project"
+  },
+  "file_info": {
+    "file_name": "EMRTS_Weekly_report_2026.04.03_Hanmo_Yang.json",
+    "date": "03/30 – 04/03"
+  }
+}
