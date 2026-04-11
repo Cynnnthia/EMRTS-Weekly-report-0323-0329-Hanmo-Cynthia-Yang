@@ -1,0 +1,87 @@
+{
+  "contact_info": {
+    "name": "Hanmo (Cynthia) Yang",
+    "phone": "5303767726",
+    "email": "Sunnyhanmo2017@hotmail.com",
+    "github": "https://github.com/Cynnnthia/Medicaid-Expenditure-Project/blob/main/Code.py"
+  },
+  "weekly_report": {
+    "week": "04/06 – 04/10",
+    "subject": {
+      "title": "Medicaid_Expenditure_Projection",
+      "repository": "https://github.com/Cynnnthia/Medicaid-Expenditure-Project/blob/main/Code.py",
+      "details": [
+        "Fixed NameError caused by undefined HAS_PROPHET variable by adding a try/except import block for the Prophet library.",
+        "Fixed ARIMA model bug where numpy.ndarray object had no attribute values by replacing .values with np.asarray().",
+        "Added data point value annotations to Fig 1 (historical trend), Fig 3 (all model forecasts), and Fig 4 (best model with CI) using ax.annotate().",
+        "Built a complete data summary table covering 2013–2035, merging historical expenditure data with 10-year forecast projections including confidence intervals and YoY growth rates.",
+        "Added model validation section including ADF stationarity test, Durbin-Watson residual test, and time series cross-validation to verify forecast reliability."
+      ],
+      "notes": [
+        "HAS_PROPHET flag allows the pipeline to run gracefully whether or not Prophet is installed.",
+        "ARIMA now correctly handles both pandas Series and numpy arrays as input.",
+        "Annotations use offset points to avoid overlapping with data markers on charts.",
+        "Full data table exported as CSV: full_data_table_2013_2035.csv.",
+        "Validation results print directly to notebook output and can be saved as a text file."
+      ]
+    },
+    "plan_next_week": [
+      "Continue working on Medicaid Expenditure Projection project.",
+      "Refine forecast models based on validation results.",
+      "Improve HTML report with additional interactive features."
+    ],
+    "hours_worked": 25
+  },
+  "intern_checklist": [
+    "Receive the internship offer letter",
+    "Accept the terms of the offer letter",
+    "Create a telegram account and be added into group chat",
+    "Create a linkedin account (Connect with Verbus, and other interns in the program. Then join MMIS Professionals and Mostly Medicaid (Medicaid Professionals))",
+    "Create a Github account",
+    "Please use Mermaid in your documentation.",
+    "https://mermaid-js.github.io/mermaid/#/",
+    "https://github.blog/2022-02-14-include-diagrams-markdown-files-mermaid/",
+    "Please use dbdiagram for ERD Documentation https://dbdiagram.io/",
+    "Obtain Gloodata information https://gloodata.com/",
+    "Watch Gloodata tutorials",
+    "Practice Gloodata",
+    "Obtain Ubuntu information",
+    "Read 'Pro Bash Programming'",
+    "Watch bash tutorials",
+    "Practice bash",
+    "Recommended AI assistant is CLAUDE",
+    "Attend the daily standup calls",
+    "Take notes and produce weekly report (due Friday's, Saturdays at the latest)",
+    "PDF(EMRTS_Weekly_report_date_firstname_lastname.pdf)",
+    "JSON (EMRTS_Weekly_report_date_firstname_lastname.json)",
+    "Watch the Python Lectures from MIT https://ocw.mit.edu/courses/6-0001-introduction-to-computer-science-and-programming-in-python-fall-2016/",
+    "https://ocw.mit.edu/courses/6-0002-introduction-to-computational-thinking-and-data-science-fall-2016/",
+    "Python package managing 'uv' https://www.youtube.com/watch?v=AMdG7IjgSPM",
+    "Learn about Medicaid domain",
+    "What is Medicaid",
+    "Reading the blog from EMRTS.us",
+    "Understand the sources",
+    "Learn about time series analysis",
+    "Online tutorial",
+    "What is Prophet",
+    "Packages/programming languages to use",
+    "Practice Prophet",
+    "Work on the Assigned Project",
+    "Understand the purpose of the Project",
+    "Teamwork",
+    "Discuss and share the opinion and thoughts over Project",
+    "Distribute the part of working"
+  ],
+  "resources": [
+    "System Design was HARD until I Learned these 30 Concepts https://www.youtube.com/watch?v=s9Qh9fWeOAk"
+  ],
+  "current_links": {
+    "EMR TECHNICAL SOLUTIONS, LLC": "https://emrts.us/",
+    "Edmond Data Science": "https://edmonddatascience.com/",
+    "Provider Vault": "https://providervault.us/"
+  },
+  "file_info": {
+    "file_name": "EMRTS_Weekly_report_2026.04.10_Hanmo_Yang.json",
+    "date": "04/06 – 04/10"
+  }
+}
