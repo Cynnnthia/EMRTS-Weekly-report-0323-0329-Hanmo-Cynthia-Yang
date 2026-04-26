@@ -1,0 +1,109 @@
+{
+  "contact_info": {
+    "name": "Hanmo (Cynthia) Yang",
+    "phone": "5303767726",
+    "email": "sunnyhanmo2017@hotmail.com",
+    "github": "https://github.com/cynnnthia"
+  },
+  "weekly_report": {
+    "week": "04/20 – 04/25",
+    "subject": {
+      "title": "Django Project (Preparation Work)",
+      "details": [
+        "Read and studied two Django books: Django for Beginners (William S. Vincent) and Django in Action, covering architecture, ORM, views, user management, forms, testing, and modern deployment practices.",
+        "Learned Django's MVT (Model-View-Template) pattern and how a request travels from the URL dispatcher through a view function or class, into ORM queries, and into a rendered template response.",
+        "Studied project organization best practices: splitting functionality into focused Django apps, separating settings by environment, and keeping SECRET_KEY and credentials out of the codebase via django-environ or python-decouple.",
+        "Understood the importance of subclassing AbstractUser before the first migration as the single most consequential early decision in a Django project.",
+        "Studied Django ORM in depth: QuerySet lazy evaluation, field lookups, ForeignKey/ManyToManyField/OneToOneField relationship types, on_delete strategies, and the N+1 query problem solved via select_related() and prefetch_related().",
+        "Learned migrations as version control for the database schema: running makemigrations after every model change, committing migration files to git, and using numbered rollbacks when needed.",
+        "Compared function-based views (FBVs) and class-based generic views (CBVs): FBVs are easier to read, CBVs eliminate boilerplate for standard CRUD operations.",
+        "Learned URL naming best practices using {% url 'name' %} in templates and reverse() in Python to avoid hardcoding paths, and template inheritance with {% extends %} and {% include %}.",
+        "Studied the full Django authentication lifecycle: registration, login, logout, password change, and password reset via email; extended user model with Profile via OneToOneField and Django signals (post_save).",
+        "Learned security fundamentals: CSRF token on every POST form, access control via @login_required or LoginRequiredMixin, object-level authorization checks, and enforcing HTTPS in production.",
+        "Studied ModelForm best practices: using a fields whitelist, field-level validation in clean_fieldname(), cross-field validation in clean(), and the Post/Redirect/Get (PRG) pattern to prevent duplicate form submissions.",
+        "Learned testing methodology: using Django's TestCase with the built-in Client for integration tests, checking status codes, verifying database state, and using setUp() with automatic rollback for test isolation.",
+        "Studied modern Django stack extensions: Django REST Framework (ModelSerializer analogy), HTMX for dynamic no-refresh interactivity using HTML attributes (hx-get, hx-post, hx-target), and feature flags via django-waffle.",
+        "Reviewed deployment best practices: PostgreSQL over SQLite for concurrent writes, collectstatic with WhiteNoise, DEBUG=False in production, and containerized deployment to platforms such as Fly.io or Railway.",
+        "Compiled a resource list for Django development covering official docs, interactive platforms (Real Python, Django Girls, CS50 Web), books, video courses, and community forums."
+      ],
+      "notes": [
+        "Key early decisions that are hard to undo: customize User model before first migration, store all secrets in environment variables, use PostgreSQL from the start, and write tests alongside features.",
+        "Django in Action goes further than Django for Beginners on performance (N+1 queries), APIs (DRF), HTMX, and feature flags.",
+        "HTMX allows dynamic interactivity without JavaScript frameworks by having Django return HTML fragments instead of JSON.",
+        "The PRG pattern (Post/Redirect/Get) is critical for preventing duplicate records caused by browser refresh after form submission.",
+        "Suggested learning path: Python basics → Django official tutorial → Django for Beginners → personal project → Django REST Framework → Two Scoops of Django."
+      ]
+    },
+    "plan_next_week": [
+      "Begin hands-on Django project setup: initialize project structure, configure custom User model, and set up environment variables.",
+      "Complete the Django official tutorial (polling app) to reinforce MVT concepts in practice.",
+      "Set up PostgreSQL locally and connect it to the Django project.",
+      "Write initial models and run first migrations; practice using the Django ORM shell.",
+      "Continue reading Two Scoops of Django for best practices on project structure and settings management."
+    ],
+    "hours_worked": 25
+  },
+  "intern_checklist": [
+    "Receive the internship offer letter",
+    "Accept the terms of the offer letter",
+    "Create a telegram account and be added into group chat",
+    "Create a linkedin account (Connect with Verbus, and other interns in the program. Then join MMIS Professionals and Mostly Medicaid (Medicaid Professionals))",
+    "Create a Github account",
+    "Please use Mermaid in your documentation.",
+    "https://mermaid-js.github.io/mermaid/#/",
+    "https://github.blog/2022-02-14-include-diagrams-markdown-files-mermaid/",
+    "Please use dbdiagram for ERD Documentation https://dbdiagram.io/",
+    "Obtain Gloodata information https://gloodata.com/",
+    "Watch Gloodata tutorials",
+    "Practice Gloodata",
+    "Obtain Ubuntu information",
+    "Read 'Pro Bash Programming'",
+    "Watch bash tutorials",
+    "Practice bash",
+    "Recommended AI assistant is CLAUDE",
+    "Attend the daily standup calls",
+    "Take notes and produce weekly report (due Friday's, Saturdays at the latest)",
+    "PDF(EMRTS_Weekly_report_date_firstname_lastname.pdf)",
+    "JSON (EMRTS_Weekly_report_date_firstname_lastname.json)",
+    "Watch the Python Lectures from MIT https://ocw.mit.edu/courses/6-0001-introduction-to-computer-science-and-programming-in-python-fall-2016/",
+    "https://ocw.mit.edu/courses/6-0002-introduction-to-computational-thinking-and-data-science-fall-2016/",
+    "Python package managing 'uv' https://www.youtube.com/watch?v=AMdG7IjgSPM",
+    "Learn about Medicaid domain",
+    "What is Medicaid",
+    "Reading the blog from EMRTS.us",
+    "Understand the sources",
+    "Learn about time series analysis",
+    "Online tutorial",
+    "What is Prophet",
+    "Packages/programming languages to use",
+    "Practice Prophet",
+    "Work on the Assigned Project",
+    "Understand the purpose of the Project",
+    "Teamwork",
+    "Discuss and share the opinion and thoughts over Project",
+    "Distribute the part of working"
+  ],
+  "resources": [
+    "Django Docs — https://docs.djangoproject.com",
+    "Python Docs — https://docs.python.org",
+    "Real Python — https://realpython.com",
+    "Django Girls Tutorial — https://tutorial.djangogirls.org",
+    "CS50 Web Programming with Python and JavaScript — https://cs50.harvard.edu/web",
+    "Django for Beginners by William S. Vincent",
+    "Two Scoops of Django by Audrey & Daniel Roy Greenfeld",
+    "Fluent Python by Luciano Ramalho",
+    "Corey Schafer YouTube Channel — Django & Python tutorials",
+    "Traversy Media YouTube — https://www.youtube.com/@TraversyMedia",
+    "Django Forum — https://forum.djangoproject.com",
+    "System Design was HARD until I Learned these 30 Concepts https://www.youtube.com/watch?v=s9Qh9fWeOAk"
+  ],
+  "current_links": {
+    "EMR TECHNICAL SOLUTIONS, LLC": "https://emrts.us/",
+    "Edmond Data Science": "https://edmonddatascience.com/",
+    "Provider Vault": "https://providervault.us/"
+  },
+  "file_info": {
+    "file_name": "EMRTS_Weekly_report_2026.04.25_Hanmo_Yang.json",
+    "date": "04/20 – 04/25"
+  }
+}
