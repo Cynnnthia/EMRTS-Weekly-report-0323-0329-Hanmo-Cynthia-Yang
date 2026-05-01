@@ -1,0 +1,176 @@
+
+Copy
+
+{
+  "contact_info": {
+    "name": "Hanmo (Cynthia) Yang",
+    "phone": "5303767726",
+    "email": "sunnyhanmo2017@hotmail.com",
+    "github": "https://github.com/cynnnthia"
+  },
+  "weekly_report": {
+    "week": "04/27 – 05/01",
+    "subject": {
+      "title": "Django Project — Medicaid Expenditure Projection Web Application",
+      "repository": "https://github.com/cynnnthia",
+      "overview": "A Django web application that allows users to input a U.S. state name and receive a data-driven 10-year Medicaid expenditure forecast based on historical CMS (Centers for Medicare & Medicaid Services) spending data.",
+      "goals": [
+        "Build a functional Django web application with state input and 10-year projection output.",
+        "Run the application locally first, then prepare and execute a deployment to the Vista Linux server.",
+        "Maintain a GitHub repository with clean, documented, versioned code throughout development.",
+        "Learn Linux shell commands and shell scripting in the Vista server environment.",
+        "Apply all four core testing methodologies (unit, integration, system, acceptance) as development progresses."
+      ],
+      "projection_models": [
+        {
+          "name": "Linear Regression",
+          "description": "Default baseline. Fits a straight-line trend to historical data using scikit-learn LinearRegression. Fast and interpretable."
+        },
+        {
+          "name": "Polynomial Regression (degree 2)",
+          "description": "Captures accelerating or decelerating growth curves. Used when linear R² < 0.90."
+        },
+        {
+          "name": "Compound Annual Growth Rate (CAGR)",
+          "description": "Computes the geometric mean year-over-year growth rate and projects it forward. Appropriate for exponentially growing state programs."
+        }
+      ],
+      "model_selection": "Best-fit model is selected automatically based on R² score via the services.py module.",
+      "development_phases": [
+        {
+          "phase": 1,
+          "name": "Project Setup",
+          "key_deliverables": "Django project scaffold, GitHub repo, requirements.txt, initial README",
+          "testing": "None (setup)"
+        },
+        {
+          "phase": 2,
+          "name": "Data Layer",
+          "key_deliverables": "StateExpenditure model, migration, management command, seed CSV loaded",
+          "testing": "Unit: models"
+        },
+        {
+          "phase": 3,
+          "name": "Projection Engine",
+          "key_deliverables": "services.py with all 3 models, model selection logic, confidence intervals",
+          "testing": "Unit: services"
+        },
+        {
+          "phase": 4,
+          "name": "Views & URLs",
+          "key_deliverables": "HomeView, ResultsView, ExportCSVView, AboutView wired up",
+          "testing": "Integration: views"
+        },
+        {
+          "phase": 5,
+          "name": "Templates & UI",
+          "key_deliverables": "All templates with Bootstrap, Chart.js chart rendering",
+          "testing": "System: full flows"
+        },
+        {
+          "phase": 6,
+          "name": "Local QA",
+          "key_deliverables": "All tests passing, README updated, app runs locally at localhost:8000",
+          "testing": "All 4 types"
+        },
+        {
+          "phase": 7,
+          "name": "Deployment Prep",
+          "key_deliverables": "Settings split (dev/prod), static files, Gunicorn config, Nginx config",
+          "testing": "System on Vista"
+        },
+        {
+          "phase": 8,
+          "name": "Vista Deployment",
+          "key_deliverables": "App live on Vista server, GitHub updated, TESTING.md written",
+          "testing": "Acceptance: UAT"
+        }
+      ],
+      "details": [
+        "Set up Mac terminal environment: installed GitHub, Python, and Visual Studio Code for local development.",
+        "Created a Django local server and initialized the project scaffold with requirements.txt and initial README.",
+        "Wrote data models in models.py: StateExpenditure model with fields state_name, state_abbr, fiscal_year, total_expenditure, federal_share, state_share; and ProjectionResult model with fields state_name, projection_year, projected_expenditure, lower_bound, upper_bound, model_type, r_squared, computed_at.",
+        "Combined 13 years of historical Medicaid expenditure data from multiple sources into a single unified CSV dataset.",
+        "Loaded CSV data into the Django database using a custom management command (python3 manage.py load_data), successfully loading 656 records."
+      ],
+      "notes": [
+        "StateExpenditure model uses Meta ordering by ['state_name', 'fiscal_year'] for consistent query results.",
+        "ProjectionResult stores model_type as a CharField to record which of the three projection strategies was selected.",
+        "656 records successfully loaded covers all 50 states plus DC across 13 fiscal years.",
+        "The load_data management command clears existing data before reloading to avoid duplicates.",
+        "services.py model selection logic compares R² scores across all three models and returns the best fit automatically."
+      ]
+    },
+    "plan_next_week": [
+      "Implement services.py projection engine with all three models (Linear Regression, Polynomial Regression, CAGR) and automatic model selection logic.",
+      "Build HomeView, ResultsView, ExportCSVView, and AboutView and wire up URL patterns.",
+      "Create frontend templates with Bootstrap layout and Chart.js for 10-year forecast visualization.",
+      "Write unit tests for models and services modules.",
+      "Run full local QA and verify the app runs correctly at localhost:8000."
+    ],
+    "hours_worked": 25
+  },
+  "intern_checklist": [
+    "Receive the internship offer letter",
+    "Accept the terms of the offer letter",
+    "Create a telegram account and be added into group chat",
+    "Create a linkedin account (Connect with Verbus, and other interns in the program. Then join MMIS Professionals and Mostly Medicaid (Medicaid Professionals))",
+    "Create a Github account",
+    "Please use Mermaid in your documentation.",
+    "https://mermaid-js.github.io/mermaid/#/",
+    "https://github.blog/2022-02-14-include-diagrams-markdown-files-mermaid/",
+    "Please use dbdiagram for ERD Documentation https://dbdiagram.io/",
+    "Obtain Gloodata information https://gloodata.com/",
+    "Watch Gloodata tutorials",
+    "Practice Gloodata",
+    "Obtain Ubuntu information",
+    "Read 'Pro Bash Programming'",
+    "Watch bash tutorials",
+    "Practice bash",
+    "Recommended AI assistant is CLAUDE",
+    "Attend the daily standup calls",
+    "Take notes and produce weekly report (due Friday's, Saturdays at the latest)",
+    "PDF(EMRTS_Weekly_report_date_firstname_lastname.pdf)",
+    "JSON (EMRTS_Weekly_report_date_firstname_lastname.json)",
+    "Watch the Python Lectures from MIT https://ocw.mit.edu/courses/6-0001-introduction-to-computer-science-and-programming-in-python-fall-2016/",
+    "https://ocw.mit.edu/courses/6-0002-introduction-to-computational-thinking-and-data-science-fall-2016/",
+    "Python package managing 'uv' https://www.youtube.com/watch?v=AMdG7IjgSPM",
+    "Learn about Medicaid domain",
+    "What is Medicaid",
+    "Reading the blog from EMRTS.us",
+    "Understand the sources",
+    "Learn about time series analysis",
+    "Online tutorial",
+    "What is Prophet",
+    "Packages/programming languages to use",
+    "Practice Prophet",
+    "Work on the Assigned Project",
+    "Understand the purpose of the Project",
+    "Teamwork",
+    "Discuss and share the opinion and thoughts over Project",
+    "Distribute the part of working"
+  ],
+  "resources": [
+    "Django Docs — https://docs.djangoproject.com",
+    "Python Docs — https://docs.python.org",
+    "Real Python — https://realpython.com",
+    "Django Girls Tutorial — https://tutorial.djangogirls.org",
+    "CS50 Web Programming with Python and JavaScript — https://cs50.harvard.edu/web",
+    "System Design was HARD until I Learned these 30 Concepts https://www.youtube.com/watch?v=s9Qh9fWeOAk"
+  ],
+  "current_links": {
+    "EMR TECHNICAL SOLUTIONS, LLC": "https://emrts.us/",
+    "Edmond Data Science": "https://edmonddatascience.com/",
+    "Provider Vault": "https://providervault.us/"
+  },
+  "file_info": {
+    "file_name": "EMRTS_Weekly_report_2026.05.01_Hanmo_Yang.json",
+    "date": "04/27 – 05/01"
+  }
+}
+
+
+
+
+
+
