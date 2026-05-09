@@ -1,0 +1,119 @@
+{
+  "contact_info": {
+    "name": "Hanmo (Cynthia) Yang",
+    "phone": "5303767726",
+    "email": "sunnyhanmo2017@hotmail.com",
+    "github": "https://github.com/cynnnthia"
+  },
+  "weekly_report": {
+    "week": "05/04 – 05/08",
+    "subject": {
+      "title": "Django Project — Medicaid Expenditure Projection Web Application",
+      "repository": "https://github.com/cynnnthia",
+      "overview": "A Django web application that allows users to input a U.S. state name and receive a data-driven 10-year Medicaid expenditure forecast based on historical CMS (Centers for Medicare & Medicaid Services) spending data.",
+      "goals": [
+        "Build a functional Django web application with state input and 10-year projection output.",
+        "Run the application locally first, then prepare and execute a deployment to the Vista Linux server.",
+        "Maintain a GitHub repository with clean, documented, versioned code throughout development.",
+        "Learn Linux shell commands and shell scripting in the Vista server environment.",
+        "Apply all four core testing methodologies (unit, integration, system, acceptance) as development progresses."
+      ],
+      "projection_models": [
+        {
+          "name": "Linear Regression",
+          "description": "Default baseline. Fits a straight-line trend to historical data using scikit-learn LinearRegression. Fast and interpretable."
+        },
+        {
+          "name": "Polynomial Regression (degree 2)",
+          "description": "Captures accelerating or decelerating growth curves. Used when linear R² < 0.90."
+        },
+        {
+          "name": "Compound Annual Growth Rate (CAGR)",
+          "description": "Computes the geometric mean year-over-year growth rate and projects it forward. Appropriate for exponentially growing state programs."
+        }
+      ],
+      "model_selection": "Best-fit model is selected automatically based on R² score via the services.py module.",
+      "details": [
+        "Implemented services.py with the full projection engine: get_or_compute_projection() checks cache (ProjectionResult objects filtered within last 30 days), fetches historical StateExpenditure records, runs all three models (Linear Regression, Polynomial Regression degree 2, CAGR), selects the best fit by R² score, computes 95% confidence intervals using residual standard error (margin = 1.96 × std_err), and saves 11 ProjectionResult records per state to the database.",
+        "Implemented get_historical_data() to return a list of fiscal_year and total_expenditure dicts ordered by fiscal year, and get_all_states() to return a distinct sorted list of all state names from the database.",
+        "Wrote views.py for the projections app, wiring HomeView, ResultsView, ExportCSVView, and AboutView to their respective URL patterns.",
+        "Configured URL routing in urls.py: project-level urls.py includes projections.urls via path('', include('projections.urls')), with admin route also registered.",
+        "Wrote base.html template with Bootstrap 5.3, Chart.js via jsDelivr CDN, custom navbar (background #FF8F6a, white nav links), container block for page content, and footer with data source attribution.",
+        "Encountered and debugged multiple terminal errors during development: ModuleNotFoundError for 'projections.services' caused by incorrect import path, and AttributeError 'module projections.views has no attribute home' caused by view naming mismatch between urls.py and views.py.",
+        "Resolved all import and attribute errors by correcting module paths and view function names; successfully started the Django development server at http://127.0.0.1:8000/ using python3 manage.py runserver on May 7, 2026 (Django 6.0.4, 0 issues silenced)."
+      ],
+      "notes": [
+        "Cache logic in get_or_compute_projection() avoids redundant model recomputation by reusing ProjectionResult records created within the last 30 days.",
+        "The 95% confidence interval is computed as: margin = 1.96 × std(residuals), applied symmetrically as lower_bound and upper_bound around each projected value.",
+        "The ModuleNotFoundError was caused by services.py not being placed inside the projections app directory; resolved by correcting the file location.",
+        "The AttributeError was caused by defining the view as a class (HomeView) but referencing it in urls.py as views.home (function-based style); resolved by using Home.as_view().",
+        "Development server is running correctly at http://127.0.0.1:8000/; next step is building out the frontend website templates."
+      ]
+    },
+    "plan_next_week": [
+      "Build out all HTML templates: home page with state input form, results page with Chart.js 10-year forecast chart, about page, and CSV export.",
+      "Connect ResultsView to pass projection data and historical data into the results template for rendering.",
+      "Style all pages using Bootstrap 5 and verify responsive layout on different screen sizes.",
+      "Write integration tests for views and system tests for the full request-response flow.",
+      "Begin deployment preparation: split settings into dev/prod, configure static files with WhiteNoise, and prepare Gunicorn and Nginx config for Vista server."
+    ],
+    "hours_worked": 25
+  },
+  "intern_checklist": [
+    "Receive the internship offer letter",
+    "Accept the terms of the offer letter",
+    "Create a telegram account and be added into group chat",
+    "Create a linkedin account (Connect with Verbus, and other interns in the program. Then join MMIS Professionals and Mostly Medicaid (Medicaid Professionals))",
+    "Create a Github account",
+    "Please use Mermaid in your documentation.",
+    "https://mermaid-js.github.io/mermaid/#/",
+    "https://github.blog/2022-02-14-include-diagrams-markdown-files-mermaid/",
+    "Please use dbdiagram for ERD Documentation https://dbdiagram.io/",
+    "Obtain Gloodata information https://gloodata.com/",
+    "Watch Gloodata tutorials",
+    "Practice Gloodata",
+    "Obtain Ubuntu information",
+    "Read 'Pro Bash Programming'",
+    "Watch bash tutorials",
+    "Practice bash",
+    "Recommended AI assistant is CLAUDE",
+    "Attend the daily standup calls",
+    "Take notes and produce weekly report (due Friday's, Saturdays at the latest)",
+    "PDF(EMRTS_Weekly_report_date_firstname_lastname.pdf)",
+    "JSON (EMRTS_Weekly_report_date_firstname_lastname.json)",
+    "Watch the Python Lectures from MIT https://ocw.mit.edu/courses/6-0001-introduction-to-computer-science-and-programming-in-python-fall-2016/",
+    "https://ocw.mit.edu/courses/6-0002-introduction-to-computational-thinking-and-data-science-fall-2016/",
+    "Python package managing 'uv' https://www.youtube.com/watch?v=AMdG7IjgSPM",
+    "Learn about Medicaid domain",
+    "What is Medicaid",
+    "Reading the blog from EMRTS.us",
+    "Understand the sources",
+    "Learn about time series analysis",
+    "Online tutorial",
+    "What is Prophet",
+    "Packages/programming languages to use",
+    "Practice Prophet",
+    "Work on the Assigned Project",
+    "Understand the purpose of the Project",
+    "Teamwork",
+    "Discuss and share the opinion and thoughts over Project",
+    "Distribute the part of working"
+  ],
+  "resources": [
+    "Django Docs — https://docs.djangoproject.com",
+    "Django URL dispatcher — https://docs.djangoproject.com/en/6.0/topics/http/urls/",
+    "Django deployment with WSGI/ASGI — https://docs.djangoproject.com/en/6.0/howto/deployment/",
+    "Bootstrap 5.3 CDN — https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/",
+    "Chart.js CDN — https://cdn.jsdelivr.net/npm/chart.js",
+    "System Design was HARD until I Learned these 30 Concepts https://www.youtube.com/watch?v=s9Qh9fWeOAk"
+  ],
+  "current_links": {
+    "EMR TECHNICAL SOLUTIONS, LLC": "https://emrts.us/",
+    "Edmond Data Science": "https://edmonddatascience.com/",
+    "Provider Vault": "https://providervault.us/"
+  },
+  "file_info": {
+    "file_name": "EMRTS_Weekly_report_2026.05.08_Hanmo_Yang.json",
+    "date": "05/04 – 05/08"
+  }
+}
